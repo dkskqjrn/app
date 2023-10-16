@@ -1,7 +1,10 @@
 {
   "name": "app",
   "version": "0.0.1",
-  "repository": "<Add your repository here>",
+  "repository": {
+    "type": "git",
+    "url": "<Add your repository here>"
+  },
   "license": "UNLICENSED",
   "description": "Business Application",
   "engines": {
@@ -11,12 +14,10 @@
     "@sap/cds": "^6.8",
     "@sap/audit-logging": "^5",
     "hdb": "^0.19",
-
     "@sap-cloud-sdk/http-client": "^2.5",
     "@sap/xsenv": "^3",
     "@sap/xssec": "^3",
     "passport": "^0.4.1",
-
     "debug": "^4.3",
     "express": "^4"
   },
@@ -84,19 +85,18 @@
             }
           }
         }
-      }
-      ,
+      },
       "db": {
         "[production]": {
-          "kind": "hana-cloud"
-          ,"model": [
+          "kind": "hana-cloud",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
         },
         "[development]": {
-          "kind": "sql"
-          ,"model": [
+          "kind": "sql",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
@@ -105,8 +105,7 @@
           "db",
           "srv"
         ]
-      }
-      ,
+      },
       "NearEarthObjectWebService": {
         "kind": "rest",
         "impl": "srv/external/NearEarthObjectWebService.js",
@@ -121,5 +120,7 @@
         }
       }
     }
-  }
+  },
+  "main": "index.js",
+  "author": ""
 }
