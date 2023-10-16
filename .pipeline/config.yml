@@ -9,6 +9,7 @@ stages:
     npmExecuteLint: true
   Additional Unit Tests:
     npmExecuteScripts: false
+   
   Acceptance:
     cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
